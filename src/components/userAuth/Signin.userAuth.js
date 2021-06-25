@@ -8,6 +8,9 @@ const SignIn = () => {
 
     const signIn = (e)=>{
         
+        console.log('email', email);
+        console.log('password', password);
+        
         e.preventDefault();
         
         service.userLogin({email,password})
