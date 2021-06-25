@@ -15,7 +15,7 @@ const SignIn = () => {
         
         service.userLogin({email,password})
         .then( (responseFromServer)=>{
-            console.log('responseFromServer');
+            console.log(responseFromServer);
         })
 
     }
