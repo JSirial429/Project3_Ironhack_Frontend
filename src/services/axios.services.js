@@ -11,7 +11,7 @@ const axiosInstance = axios.create({
         await axiosInstance.post('/user/signup', userData);
     },
     userLogin: async (userData) =>{
-        await axiosInstance.post('/user/signup', userData); 
+        await axiosInstance.post('/user/login', userData); 
     },
     productLookUp: async (product) =>{
         await axiosInstance.post('/product/search', product); 
