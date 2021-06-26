@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 //components
 import Home from './pages';
-import SigninPage from './pages/signin';
+import SigninPage from './pages/userAuth';
+// import SearchPage from './components/'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Switch>
         <Route path='/' component={Home} exact />
         <Route path='/signin' component={SigninPage} exact />
+        {/* <Route path='/search' component={SearchPage} exact /> */}
       </Switch>
     </Router>
   );
