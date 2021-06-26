@@ -1,5 +1,5 @@
 import React from 'react';
-import SignIn from '../components/Signin/index';
+import SignIn from '../components/userAuth/Signin.userAuth';
 //import ScrollToTop from '../components/ScrollToTop';
 
 function SignInPage() {
