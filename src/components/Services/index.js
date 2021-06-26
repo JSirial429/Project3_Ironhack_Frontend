@@ -4,7 +4,7 @@ import {
   ServicesH1,
   ServicesWrapper,
   ServicesCard,
-  ServicesIcon,
+  // ServicesIcon,
   ServicesH2,
   ServicesP
 } from './ServicesElements';
