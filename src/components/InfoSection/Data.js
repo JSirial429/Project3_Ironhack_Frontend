@@ -4,9 +4,9 @@ export const homeObjOne = {
     lightText: true,
     lightTextDesc: true,
     topLine: 'PRICE CHECKING',
-    headline: '',
+    headline: 'What Does It Do?',
     description:
-      '',
+      'Our price checker simply looks up a product of your choice and we scrape the internet for prices that would appeal to your pockets. ',
     buttonLabel: 'Get Started',
     imgStart: false,
     alt: '',
@@ -16,14 +16,14 @@ export const homeObjOne = {
   };
   
   export const homeObjTwo = {
-    id: 'discover',
+    id: 'dashboard',
     lightBg: true,
     lightText: false,
     lightTextDesc: false,
-    topLine: 'Unlimited Access',
-    headline: 'Login to your account at any time',
+    topLine: 'My Dashboard',
+    headline: 'Keep all your watched items all in one spot',
     description:
-      '',
+      'In My Dashboard, you can keep track of all your watched items in one place.',
     imgStart: true,
     alt: '',
     dark: false,

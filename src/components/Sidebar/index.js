@@ -49,7 +49,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact='true'
             offset={-80}
           >
-            Services
+            How To Use
           </SidebarLink>
           <SidebarLink
             to='signup'
