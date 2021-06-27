@@ -5,6 +5,7 @@ import { Container, FormWrap, Icon, FormContent, Form, FormH1, FormLabel, FormIn
 const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [user, setUser] = useState(false);
 
     const signIn = (e)=>{
         
@@ -23,6 +24,7 @@ const SignIn = () => {
 
     return (
         <>
+            {!user && 
             <Container>
                 <FormWrap>
                     <Icon to='/'>Price Checker</Icon>
@@ -38,7 +40,7 @@ const SignIn = () => {
                         </Form>
                     </FormContent>
                 </FormWrap>
-            </Container>
+            </Container>}
         </>
     );
 };
