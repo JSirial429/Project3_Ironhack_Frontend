@@ -9,13 +9,16 @@ import SigninPage from './pages/userAuth';
 
 function App() {
   return (
+  /*   <>
+      <Home/>
+    </> */
     <Router>
-      <Switch>
+     <Switch>
         <Route path='/' component={Home} exact />
         <Route path='/signin' component={SigninPage} exact />
         {/* <Route path='/search' component={SearchPage} exact /> */}
       </Switch>
-    </Router>
+   </Router>
   );
 }
 

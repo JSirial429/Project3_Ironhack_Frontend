@@ -11,7 +11,13 @@ const axiosInstance = axios.create({
         await axiosInstance.post('/user/signup', userData);
     },
     userLogin: async (userData) =>{
-        await axiosInstance.post('/user/login', userData); 
+      // try {
+      const response = await axiosInstance.post('/user/login', userData);
+      return response
+      // } catch(err) {
+      //   return err
+      // }
+    
     },
     productLookUp: async (product) =>{
         await axiosInstance.post('/product/search', product); 

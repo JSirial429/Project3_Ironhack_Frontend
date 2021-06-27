@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll } from 'react-scroll';
@@ -95,7 +96,11 @@ const Navbar = ({ toggle }) => {
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+              <NavBtnLink to='/signin'>
+                <Link to ='/signin'>
+                  Sign In
+                </Link>
+              </NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

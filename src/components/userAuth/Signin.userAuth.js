@@ -6,17 +6,29 @@ const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const signIn = (e)=>{
+    const signIn = async (e)=>{
         
-        console.log('email', email);
-        console.log('password', password);
+        //console.log('email', email);
+        //console.log('password', password);
         
         e.preventDefault();
         
         service.userLogin({email,password})
-        .then( (responseFromServer)=>{
-            console.log(responseFromServer);
+        .then( response =>{
+            console.log('user is authenticated', response)
         })
+        .catch( err =>{
+            console.log('user is not authenticated', err.response.data.errorMessage)
+        })
+
+        
+        //console.log("Response from user sign in: ", response);
+        /* .then( (responseFromServer)=>{
+            console.log("responseFromServer");
+        })
+        .catch( err=>{
+            console.log('error has occured in user login', err)
+        }) */
 
     }
 
