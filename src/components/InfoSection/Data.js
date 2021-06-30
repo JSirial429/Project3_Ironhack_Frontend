@@ -21,9 +21,10 @@ export const homeObjOne = {
     lightText: false,
     lightTextDesc: false,
     topLine: 'My Dashboard',
-    headline: 'Keep all your watched items all in one spot',
+    headline: 'Keep track of your watched items',
     description:
       'In My Dashboard, you can keep track of all your watched items in one place.',
+    buttonLabel: 'My Dashboard',
     imgStart: true,
     alt: '',
     dark: false,
@@ -36,8 +37,8 @@ export const homeObjOne = {
     lightBg: true,
     lightText: false,
     lightTextDesc: false,
-    topLine: '',
-    headline: '',
+    topLine: 'create an account',
+    headline: 'Start searching for the best prices now',
     description:
       "",
     buttonLabel: 'Start Now',
