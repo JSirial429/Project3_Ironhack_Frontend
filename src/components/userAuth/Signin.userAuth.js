@@ -17,9 +17,11 @@ const SignIn = () => {
         service.userLogin({email,password})
         .then( response =>{
             console.log('user is authenticated', response)
+            setUser(true);
+            console.log(user);
         })
         .catch( err =>{
-            console.log('user is not authenticated', err.response.data.errorMessage)
+            console.log('user is not authenticated', err)
         })
 
         
