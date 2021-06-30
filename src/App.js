@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //components
 import Home from './pages';
 import SigninPage from './pages/userAuth';
-import Dashboard from './pages/dashboard'
+import Dashboard from './components/Dashboard/index'
 
 function App() {
 

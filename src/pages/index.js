@@ -8,7 +8,6 @@ import {
   homeObjTwo,
   homeObjThree
 } from '../components/InfoSection/Data';
-import Dashboard from '../components/Dashboard';
 import Services from '../components/Services';
 import Footer from '../Footer';
 

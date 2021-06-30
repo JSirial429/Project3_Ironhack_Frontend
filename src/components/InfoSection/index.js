@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../ButtonElement';
+import { Link } from 'react-router-dom';
 import {
   InfoContainer,
   InfoWrapper,
@@ -42,9 +43,10 @@ const InfoSection = ({
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
-                <BtnWrap>
-                  <Button
-                    to='home'
+                
+                  <BtnWrap>
+                   <Button
+                    to={`${buttonLabel}`}
                     smooth={true}
                     duration={500}
                     spy={true}
@@ -54,9 +56,11 @@ const InfoSection = ({
                     dark={dark ? 1 : 0}
                     dark2={dark2 ? 1 : 0}
                   >
-                    {buttonLabel}
+                    <Link to={`/${buttonLabel}`}>{buttonLabel}</Link>
                   </Button>
-                </BtnWrap>
+                  </BtnWrap>
+                  
+                
               </TextWrapper>
             </Column1>
             <Column2>
