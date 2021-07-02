@@ -10,14 +10,16 @@ const Dashboard = () => {
 
     const[product, setProduct] = useState("");
     const[productResult, setProductResult] = useState("");
-    const[productArr, setProductArr] = useState([]);
+    const[productArr, setProductArr] = useState();
 
     const productSearch = async (e)=>{
 
         e.preventDefault();
         service.productLookUp({product})
         .then( response =>{
-            console.log('Response from product look up:' ,response);
+            //console.log('Response from product look up:' ,response);
+            setProductArr(response);
+            console.log(productArr);
         })
         .catch( err =>{
             console.log(err);
