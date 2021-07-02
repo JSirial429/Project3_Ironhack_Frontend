@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 import service from '../../services/axios.services';
 import { Container, FormWrap, Icon, FormContent, Form, FormH1, FormLabel, FormInput, FormButton, Text } from './SigninElements';
 
@@ -6,6 +7,8 @@ const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [user, setUser] = useState(false);
+
+    const history = useHistory();
 
     const signIn = async (e)=>{
         
@@ -17,8 +20,10 @@ const SignIn = () => {
         service.userLogin({email,password})
         .then( response =>{
             console.log('user is authenticated', response)
-            setUser(true);
-            console.log(user);
+            /* setUser(true);
+            console.log(user); */
+            history.push("/dashboard");
+            
         })
         .catch( err =>{
             console.log('user is not authenticated', err)

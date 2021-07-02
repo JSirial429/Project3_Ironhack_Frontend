@@ -2,7 +2,8 @@ import axios from 'axios';
 
 const axiosInstance = axios.create({
     
-    baseURL: "https://ironhack-project-3-backend.herokuapp.com"
+    baseURL: "http://localhost:3001"
+    //baseURL: "https://ironhack-project-3-backend.herokuapp.com"
     //baseURL: process.env.BACKEND_URL || "http://localhost:3001",
     //withCredentials: true,
   });
@@ -13,16 +14,13 @@ const axiosInstance = axios.create({
         await axiosInstance.post('/user/signup', userData);
     },
     userLogin: async (userData) =>{
-      // try {
       const response = await axiosInstance.post('/user/login', userData);
-      return response
-      // } catch(err) {
-      //   return err
-      // }
+      return response;
     
     },
     productLookUp: async (product) =>{
-        await axiosInstance.post('/product/search', product); 
+        const response = await axiosInstance.post(`/product/search`, product); 
+        return response;
     },
 
   }
