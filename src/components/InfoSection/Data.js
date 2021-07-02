@@ -33,18 +33,18 @@ export const homeObjOne = {
   };
   
   export const homeObjThree = {
-    id: 'signup',
-    lightBg: true,
-    lightText: false,
-    lightTextDesc: false,
-    topLine: 'create an account',
-    headline: 'Start searching for the best prices now',
-    description:
-      "",
-    buttonLabel: 'Start Now',
-    imgStart: false,
-    alt: 'Papers',
-    dark: false,
-    primary: false,
-    darkText: true
+    // id: 'signup',
+    // lightBg: true,
+    // lightText: false,
+    // lightTextDesc: false,
+    // topLine: 'create an account',
+    // headline: 'Start searching for the best prices now',
+    // description:
+    //   "",
+    // buttonLabel: 'Start Now',
+    // imgStart: false,
+    // alt: 'Papers',
+    // dark: false,
+    // primary: false,
+    // darkText: true
   };
