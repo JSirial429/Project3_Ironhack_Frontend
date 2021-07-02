@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import SearchBar from '../SearchBar';
-<<<<<<< Updated upstream
 import { DashboardContainer, DashH1, DashP, Icon, TableWrap } from './DashboardElements';
-=======
-import { DashboardContainer, DashH1, DashP } from './DashboardElements';
+//import { DashboardContainer, DashH1, DashP } from './DashboardElements';
 import service from '../../services/axios.services';
->>>>>>> Stashed changes
 
 const Dashboard = () => {
 
