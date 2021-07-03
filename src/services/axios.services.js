@@ -20,6 +20,7 @@ const axiosInstance = axios.create({
     },
     productLookUp: async (product) =>{
         const response = await axiosInstance.post(`/product/search`, product); 
+        console.log(response);
         return response;
     },
 
