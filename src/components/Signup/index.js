@@ -1,5 +1,5 @@
 // import React from 'react'
-// import { Container, FormWrap, Icon, FormContent, Form, FormH1, FormLabel, FormInput, FormButton } from './SignupElement'
+// import { Container, FormWrap, Icon, FormContent, Form, FormH1, FormLabel, FormInput, FormButton, Text } from './SignupElement'
 
 // const Signup = () => {
 //     return (
@@ -15,6 +15,7 @@
 //                             <FormLabel htmlFor='for'>Password</FormLabel>
 //                             <FormInput type='password' required onChange={(e)=> setPassword(e.target.value)} value={password}/>
 //                             <FormButton type='Submit'>Sign Up</FormButton>
+//                             <Text to='/signin'>Already have an account? Click here.</Text>
 //                         </Form>
 //                     </FormContent>
 //                 </FormWrap>
