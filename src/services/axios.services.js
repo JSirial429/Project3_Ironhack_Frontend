@@ -3,9 +3,10 @@ import axios from 'axios';
 const axiosInstance = axios.create({
     
     //baseURL: "http://localhost:3001"
-    baseURL: "https://ironhack-project-3-backend.herokuapp.com",
+    //baseURL: "https://ironhack-project-3-backend.herokuapp.com",
     //baseURL: process.env.BACKEND_URL || "http://localhost:3001",
-    withCredentials: true,
+    baseURL: "https://cors-anywhere.herokuapp.com/https://ironhack-project-3-backend.herokuapp.com",
+    withCredentials: true
   });
 
   const service = {
