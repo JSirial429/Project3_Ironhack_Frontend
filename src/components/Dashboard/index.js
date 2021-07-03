@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { DashboardContainer, DashH1, DashP, Icon, TableWrap, TableContent, Table } from './DashboardElements';
 import './dashboard.component.css';
+import * as ReactBootStrap from "react-bootstrap";
 //import { DashboardContainer, DashH1, DashP } from './DashboardElements';
 import service from '../../services/axios.services';
 import { render } from 'react-dom';
-// import ProductTable from '../ProductTable';
+import { Link } from 'react-scroll';
+//import ProductTable from '../ProductTable';
 
 const Dashboard = () => {
 
     const[product, setProduct] = useState("");
-    const[productResult, setProductResult] = useState("");
-    const[productArr, setProductArr] = useState(null);
-
+    const[productArr, setProductArr] = useState([]);
+    const[productName, setProductName] =  useState("");
+    const[productPrice, setProductPrice] = useState("");
+    const[productLink, setProductLink] = useState("");
+    const[productArrStatus, setproductArrStatus] = useState(false);
+    
     let resultsArr = null;
 
     const productSearch = async (e)=>{
@@ -25,6 +30,8 @@ const Dashboard = () => {
             console.log("ResultsArr:", response);
             setProductArr(resultsArr);
             console.log("productArr:", productArr);
+            setproductArrStatus(true);
+            console.log(productArrStatus);
         })
         .catch( err =>{
             console.log(err);
@@ -32,11 +39,36 @@ const Dashboard = () => {
         
     }
     
-    useEffect( ()=>{
+    const renderProductRows = ()=>{
 
-        
+        productArr.map( (eachProduct, index) =>{
 
-    })
+            return(
+
+                <tr key={index}>
+                    <td>
+                        {eachProduct.title}
+                    </td>
+                    <td>
+                        {eachProduct.price}
+                    </td>
+                    <td>
+                        <Link to={eachProduct.link}>
+                            Buy Now 
+                        </Link>
+                    </td>
+                    <td>
+                        <button>
+                            Favorite
+                        </button>
+                    </td>
+                </tr>
+    
+            )
+
+        })
+
+    }
     
     return (
         <>
@@ -71,7 +103,29 @@ const Dashboard = () => {
                     <button>Search</button>
                     </form>
                         <Table>
-                        {/* <ProductTable /> */}
+                            <ReactBootStrap.Table className="react-table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Product Name
+                                        </th>
+                                        <th>
+                                            Price
+                                        </th>
+                                        <th>
+                                            Link
+                                        </th>
+                                        <th>
+                                            Add to Favorites
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        productArrStatus && renderProductRows/* productArrStatus && renderProductRows */
+                                    }
+                                </tbody>
+                            </ReactBootStrap.Table>
                         </Table>
                     </TableContent>
                 </TableWrap>
@@ -81,74 +135,3 @@ const Dashboard = () => {
 }
 
 export default Dashboard;
-
-/* export default class Dashboard extends Component{
-
-    constructor(props){
-
-        super(props);
-
-        this.onChangeProduct = this.onChangeProduct.bind(this);
-
-        this.state = {
-
-            product: "",
-            productArr: [],
-
-
-        }
-
-    }
-
-    productSearch(e){
-
-        e.preventDefault();
-        const Product = {product: this.state.product}
-        console.log(this.state.product.toString());
-        service.productLookUp(this.state.product)
-        .then( response =>{
-            console.log('Response from product look up:' ,response);
-            console.log(productArr);
-            setProductArr("response.data");
-            console.log(productArr);
-            
-        })
-        .catch( err =>{
-            console.log(err);
-        });
-        
-    }
-
-    onChangeProduct(e){
-        this.setState({product: e.target.value});
-        console.log(e.target.value);
-        console.log(this.state.product);
-    }
-
-    render(){
-
-        return(
-
-            <>
-                <DashboardContainer>
-                    <TableWrap>
-                    <Icon to='/'>Price Checker</Icon>
-                    <DashH1>My Dashboard</DashH1>
-                    <DashP>Here you can keep track of all your items and their current price.</DashP>
-                    </TableWrap>
-                </DashboardContainer> 
-                <form className="productSearchBar" onSubmit={this.productSearch}>
-                    <input type="text"
-                        value={this.state.product}
-                        onChange={this.onChangeProduct}
-                        placeholder="Type a product to search" 
-                    />
-                    <button>Search</button>
-                </form>
-            </>
-
-        )
-
-    }
-
-} */
