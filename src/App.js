@@ -26,9 +26,8 @@ function App() {
     <Router>
      <Switch>
         <Route path='/' component={Home} exact />
-        {/* <Route path='/signin' component={SigninPage} exact /> */}
+        <Route path='/signin' component={SigninPage} exact /> 
         <Route path='/dashboard' component={Dashboard} exact /> 
-        <Route path='/signin' exact render={(...props) => <SigninPage {...props} userState={this.setUser} />} />
         
         {/* <Route path='/search' component={SearchPage} exact /> */}
       </Switch>

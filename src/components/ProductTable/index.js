@@ -5,7 +5,7 @@ import { TableContainer, TableWrap } from './TableElements';
 class ProductTable extends Component {
 
     constructor(props) {
-        super(props) {
+        super(props); {
             this.state = {
                 product: [
                     { id: 1, name: " ", price: "", url: " " }
