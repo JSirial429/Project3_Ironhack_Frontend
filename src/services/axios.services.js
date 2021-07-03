@@ -6,7 +6,7 @@ const axiosInstance = axios.create({
     //baseURL: "https://ironhack-project-3-backend.herokuapp.com",
     //baseURL: process.env.BACKEND_URL || "http://localhost:3001",
     baseURL: "https://cors-anywhere.herokuapp.com/https://ironhack-project-3-backend.herokuapp.com",
-    withCredentials: true
+    //withCredentials: true
   });
 
   const service = {
