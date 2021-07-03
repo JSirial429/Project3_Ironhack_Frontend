@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { TableContainer, TableWrap } from './TableElements';
 
 
-class ProductTable extends Component {
+export default class ProductTable extends Component {
 
     constructor(props) {
         super(props); {
             this.state = {
                 product: [
-                    { id: 1, name: " ", price: "", url: " " }
+                    { position: "", title: " ", price: "", url: " " }
                 ]
             }
         }
@@ -16,13 +16,13 @@ class ProductTable extends Component {
     
     renderTableData() {
         return this.state.product.map((product, index) => {
-            const { id, name, price, url } = product
+            const { position, title, price, link } = product
             return (
-                <tr key={id}>
-                    <td>{id}</td>
-                    <td>{name}</td>
+                <tr key={position}>
+                    <td>{position}</td>
+                    <td>{title}</td>
                     <td>{price}</td>
-                    <td>{url}</td>
+                    <td>{link}</td>
                 </tr>
             )
         })
@@ -36,16 +36,15 @@ class ProductTable extends Component {
     }
 
     render() {
-    return (
-        <TableContainer>
-            <TableWrap>
-                <table id='products'>
-                    <tr>{this.renderTableHeader}</tr>
-                    {this.renderTableData}
-            </table>
-            </TableWrap>
-        </TableContainer>
-    )
+        return (
+            <TableContainer>
+                <TableWrap>
+                    <table id='products'>
+                        <tr>{this.renderTableHeader}</tr>
+                        {this.renderTableData}
+                    </table>
+                </TableWrap>
+            </TableContainer>
+        )
+    }
 }
-
-export default ProductTable;

@@ -22,12 +22,6 @@ const HeroSection = () => {
             <HeroP>
                 Start looking for the products you want and we'll let you know when they're cheap!
             </HeroP>
-            <HeroBtnWrapper>
-                    <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover}
-                    primary='true' dark='true'>
-                    Get started {hover ? <ArrowForward /> : <ArrowRight />}
-                </Button>
-                </HeroBtnWrapper>
                 </HeroContent>
         </HeroContainer>
     )

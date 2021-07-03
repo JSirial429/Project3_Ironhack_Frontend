@@ -6,9 +6,7 @@ import InfoSection from '../components/InfoSection';
 import {
   homeObjOne,
   homeObjTwo,
-  homeObjThree
 } from '../components/InfoSection/Data';
-import Services from '../components/Services';
 import Footer from '../Footer';
 
 function Home() {
@@ -24,8 +22,6 @@ function Home() {
       <HeroSection />
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
-      {/* <Services /> */}
-      <InfoSection {...homeObjThree} />
       <Footer />
     </>
   );
