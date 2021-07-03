@@ -45,7 +45,7 @@ const Footer = () => {
                 <SocialLogo to='/' onClick={toggleHome}>
                 Price Checker
             </SocialLogo>
-            <WebsiteRights>Price Checker © 2020 All rights reserved.</WebsiteRights>
+            <WebsiteRights>Price Checker © 2021 All rights reserved.</WebsiteRights>
             <SocialIcons>
                 <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
                 <FaFacebook />

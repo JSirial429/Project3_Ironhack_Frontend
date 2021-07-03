@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { DashboardContainer, DashH1, DashP, Icon, TableWrap, TableContent, Table } from './DashboardElements';
 import './dashboard.component.css';
-//import { DashboardContainer, DashH1, DashP } from './DashboardElements';
 import service from '../../services/axios.services';
 import { render } from 'react-dom';
 // import ProductTable from '../ProductTable';
