@@ -92,3 +92,6 @@ export const Table = styled.div`
     padding: 32px 32px;
 }
 `
+export const ReactBootStrap = styled.div`
+  
+`

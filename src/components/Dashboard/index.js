@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { DashboardContainer, DashH1, DashP, Icon, TableWrap, TableContent, Table } from './DashboardElements';
+import { DashboardContainer, DashH1, DashP, Icon, TableWrap, TableContent, Table, ReactBootStrap} from './DashboardElements';
 import './dashboard.component.css';
-<<<<<<< HEAD
-import * as ReactBootStrap from "react-bootstrap";
-//import { DashboardContainer, DashH1, DashP } from './DashboardElements';
-=======
->>>>>>> 544c210b83b56f7c9e3bf298230c1bef2652fb7f
 import service from '../../services/axios.services';
 import { render } from 'react-dom';
 import { Link } from 'react-scroll';
