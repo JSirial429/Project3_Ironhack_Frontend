@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { DashboardContainer, DashH1, DashP, Icon, TableWrap, TableContent, Table, ReactBootStrap} from './DashboardElements';
 import './dashboard.component.css';
+import * as ReactBootStrap from "react-bootstrap";
+//import { DashboardContainer, DashH1, DashP } from './DashboardElements';
 import service from '../../services/axios.services';
 import { render } from 'react-dom';
 import { Link } from 'react-scroll';
@@ -39,6 +41,9 @@ const Dashboard = () => {
     
     const renderProductRows = ()=>{
 
+        if(productArrStatus){
+            
+        }
         productArr.map( (eachProduct, index) =>{
 
             return(
@@ -119,9 +124,7 @@ const Dashboard = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {
-                                        productArrStatus && renderProductRows/* productArrStatus && renderProductRows */
-                                    }
+                                    
                                 </tbody>
                             </ReactBootStrap.Table>
                         </Table>
