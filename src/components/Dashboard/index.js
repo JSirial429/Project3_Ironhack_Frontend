@@ -10,7 +10,7 @@ const Dashboard = () => {
 
     const[product, setProduct] = useState("");
     const[productResult, setProductResult] = useState("");
-    const[productArr, setProductArr] = useState();
+    const[productArr, setProductArr] = useState([]);
 
     const productSearch = async (e)=>{
 
@@ -27,26 +27,8 @@ const Dashboard = () => {
 
     }
 
-   /*  render() {
 
-        return(
-            
-        
-            <form onSubmit={productSearch}>
-                <input type="text"
-                       value={product}
-                       onChange={(e)=>{setProduct(e.target.value)}}
-                       placeholder="Type product to search" />
-
-                <button>Search</button>
-
-            </form>
-            
-            
-        )
-
-
-    } */
+    
     return (
         <>
         <DashboardContainer>

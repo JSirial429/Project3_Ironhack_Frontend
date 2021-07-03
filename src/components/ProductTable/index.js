@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { TableContainer, TableWrap } from './TableElements';
 
 
-class ProductTable extends Component {
+export default class ProductTable extends Component {
 
     constructor(props) {
         super(props); {
@@ -47,5 +47,3 @@ class ProductTable extends Component {
         </TableContainer>
     )
 }
-
-export default ProductTable;
