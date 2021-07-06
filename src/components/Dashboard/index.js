@@ -194,7 +194,7 @@ const Dashboard = () => {
                                                             {eachProduct.source}
                                                         </td>
                                                         <td>
-                                                            <a href={eachProduct.link}>
+                                                            <a href={eachProduct.link} target="_blank">
                                                                 <button>
                                                                     Buy
                                                                 </button>
