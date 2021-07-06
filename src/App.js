@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages';
 import SigninPage from './pages/userAuth';
 import Dashboard from './components/Dashboard/index'
+import SaveHistory from './components/SaveHistory/savehistory.component';
 import Signup from './components/Signup';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path='/' component={Home} exact />
         <Route path='/signin' component={SigninPage} exact /> 
         <Route path='/dashboard' component={Dashboard} exact /> 
+        <Route path='/SavedProducts' component={SaveHistory} exact/>
         {/* <Route path='/signup' component={Signup} exact /> */}
         {/* <Route path='/search' component={SearchPage} exact /> */}
       </Switch>
